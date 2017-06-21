@@ -143,7 +143,7 @@ exit(0) # Remove this line after we finish phase 2
 # Create a numpy ndarray of zeros with demensions of max user id + 1 and max movie + 1 (because we'll use them as 1 indexed not zero indexed)
 
 # Find the max movie ID + 1
-maxMovie = 0 # replace 0 with the correct code
+#maxMovie = 0 # replace 0 with the correct code
 
 # Find the max user Id + 1
 maxUser = 0 # replace 0 with the correct code
