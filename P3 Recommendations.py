@@ -25,7 +25,7 @@ def findSimilar(iLike, userLikes):
     # Print the max similarity number (most times this is something like 0.17
     
     # Return the index of the user which is the best match
-    return maxIndex
+    #  return maxIndex
     
 def printMovie(id):
     # Print the id of the movie and the name.  This should look something like
@@ -109,10 +109,11 @@ print("Top Ten Movies:")
 # Print the top 10 movies
 # It should print the number, title, id, rating and count of reviews for each movie
 # ie 2. Someone Else's America (1995) (ID: 1599) Rating: 5.0 Count: 1
-for i in range(0,2):
-    print("Movie: " + str((i+1),movieRatingS[0][0] + "Movie:  "(movieRatingS[i][i] + "MovieRating:  " +
-str(movieRatingCount(movieRatingS[i][0])))))
-movieDict(key)
+for i in range(0, 10):
+    movieName = movieDict[movieRatingS[i][0]]
+    print(str(i+1) + " Movie: " + movieName + " Movie id:  "+str(movieRatingS[i][0]) + " MovieRating:  " + str(movieRatingS[i][1])
+          + " Count: " + str(movieRatingCount[movieRatingS[i][0]]))
+
 
 # Top 10 Movies with at least 100 ratings    
 print("\n\nTop Ten movies with at least 100 ratings:")
@@ -120,7 +121,17 @@ print("\n\nTop Ten movies with at least 100 ratings:")
 # The number should be the movie's absolute rank
 # ie (16. Close Shave, A (1995) (ID: 408) Rating: 4.49 Count: 112)
 # Number 16 is first in this list because it's the first movie with over 100 ratings
-
+movieRated = 0
+i = 0
+while movieRated < 10:
+    movieName = movieDict[movieRatingS[i][0]]
+    key = movieRatingS[i][0]
+    if movieRatingCount[movieRatingS[i][0]] >= 100:
+        movieRated += 1
+        print(str(i+1) + " Movie: " + movieName + " Movie id:  "+str(movieRatingS[i][0]) + " MovieRating:  " + str(movieRatingS[i][1])
+          + " Count: " + str(movieRatingCount[movieRatingS[i][0]]))
+    i += 1
+movieRated += 1
 exit(0) # Remove this line after we finish phase 2
 
 ########################################################
