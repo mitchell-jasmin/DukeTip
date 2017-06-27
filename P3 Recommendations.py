@@ -22,7 +22,8 @@ def findSimilar(iLike, userLikes):
     # You can "get rid" of a user that is most similar, but doesn't have any new likes
     # by setting the userSimilarity for them to 0
     # When you get the index, save it in the variable maxIndex
-
+#while :
+ #   print()
     # Print the max similarity number (most times this is something like 0.17
 
     # Return the index of the user which is the best match
@@ -59,11 +60,10 @@ def processLikes(iLike):
 
     # For each item the similar user likes that the person didn't already say they liked
     # print the movie name using printMovie (you'll also need a for loop and an if statement)
-    for movie in :
-        if movie not in userLikes:
-            printMovie('name')
-        elif movie in userLikes:
-            break
+#    for movie in :
+ #       if movie not in userLikes:
+  #          printMovie('name')
+   #     elif movie in userLikes:
 
 ########################################################
 # Begin Phase 1
@@ -167,10 +167,8 @@ userLikes = np.zeros((maxUser, maxMovie))
 # If the user rated a movie as 4 or 5 set userLikes to 1 for that user and movie
 # Note: You'll need a for loop and an if statement
 for row in movieData:
-    col = row['user']
-    row = row['movie']
-    if row['rating'] >= 4:
-        userLikes[col][row] = 1
+    if row['rating'] == 4:
+        userLikes[row['user'], row['movie']] = 1
 
 ########################################################
 # At this point, go back up to the top and fill in the
