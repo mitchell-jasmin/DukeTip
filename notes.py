@@ -70,23 +70,23 @@ print(movieData['user'].max())
 
 iLike = [4, 2]
 
-#change into a 0/1 array
+#  change into a 0/1 array
 iLikeNp = np.zeros(5)
 
 for i in iLike:
     iLikeNp[id] = 1
 
-#how many likes does each user have
-userLikesCount = userLikes.sum(axis = 1)
+#  how many likes does each user have
+userLikesCount = userLikes.sum(axis=1)
 print(userLikes)
-#how many items do iLike
+#  how many items do iLike
 print(iLike.sum())
-#find the things we do in common
+#  find the things we do in common
 commonLikes = userLikes * iLikeNp
 # how many things do we both like
 userAnd = commonLikes.sum(axis=1)
 print(userAnd)
-#get the id of the max value in userAnd
+#  get the id of the max value in userAnd
 print(userAnd.argmax())
 # find all the movies under 1 like
 list = np.argwhere(userLikes[1, :] == 1)
